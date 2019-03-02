@@ -1,5 +1,6 @@
 {
-  "extends":"airbnb",
+  "parser": "babel-eslint",
+  "extends":["airbnb","prettier/react"],
   "env": {
     "es6": true,
     "browser":true,
@@ -15,20 +16,18 @@
       }
     ],
     "no-console":"warn",
-    "no-tabs": [
-    "error", 
-      { 
-        "allowIndentationTabs": true 
-      }
-    ],
+    "no-tabs":0,
     "indent": "off",
-    "react/jsx-filename-extension":0
+    "react/jsx-filename-extension":0,
+    "no-new":0,
+    "no-plusplus": "off",
+    "operator-linebreak":"off"
   },
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 8,
     "ecmaFeatures":{
       "jsx":true
     },
-    "sourceType":"module"
+    "sourceType":"module",
   }
 }
