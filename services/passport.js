@@ -28,6 +28,7 @@ passport.use(
 			clientSecret: keys.googleClientSecret,
 			callbackURL: '/auth/google/callback',
 			userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo',
+			proxy: true,
 		},
 		async (accessToken, refreshToken, profile, done) => {
 			// find if the user exist
@@ -55,6 +56,7 @@ passport.use(
 			clientID: keys.facebookClientID,
 			clientSecret: keys.facebookClientSecret,
 			callbackURL: '/auth/facebook/callback',
+			proxy: true,
 		},
 		async (accessToken, refreshToken, profile, done) => {
 			// find if the user exist
